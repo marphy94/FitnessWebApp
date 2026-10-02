@@ -6,7 +6,8 @@ Trainings zu protokollieren und den Fortschritt der Gewichte über die Zeit zu v
 ## Funktionen
 
 - **Trainingspläne** – Übungen mit Sätzen, Wiederholungen, Gewicht und Pausenzeit anlegen, per Ziehen umsortieren.
-- **Training** – Plan starten, Gewicht/Wiederholungen je Satz anpassen, Sätze abhaken, automatischer
+- **Training** – laufende Trainingszeit, Übungsübersicht mit Ziel-Werten aus dem Plan, hervorgehobener aktueller Satz,
+  Gewicht/Wiederholungen nach jedem Satz eintragen (Wert wird für folgende Sätze übernommen), Sätze abhaken, automatischer
   Pausen-Countdown (mit Vibration), Anzeige „Letztes Mal“, erreichte Gewichte optional in den Plan übernehmen.
 - **Kalender** – Monatsansicht mit absolvierten (grün) und geplanten (orange) Trainingstagen,
   Trainings einplanen oder nachtragen, Statistiken (Trainings im Monat, Wochen in Folge).

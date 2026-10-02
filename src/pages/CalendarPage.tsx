@@ -4,7 +4,7 @@ import { SwipeableRow } from '../components/SwipeableRow'
 import { useData } from '../data/DataContext'
 import { navigate } from '../hooks/useHashRoute'
 import { useSwipe } from '../hooks/useSwipe'
-import { formatDate, parseISODate, toISODate, today, uid } from '../lib/util'
+import { formatDate, formatMinutes, parseISODate, toISODate, today, uid } from '../lib/util'
 import { startWorkout } from '../lib/workouts'
 
 const WEEKDAYS = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So']
@@ -198,7 +198,9 @@ function DaySheet({ date, onClose }: { date: string | null; onClose: () => void 
                 <span>
                   <strong>{w.planName}</strong>
                   <span className="muted small">
-                    {w.finishedAt ? `${sets.length} Sätze · ${Math.round(volume).toLocaleString('de-DE')} kg bewegt` : 'läuft …'}
+                    {w.finishedAt
+                      ? `${formatMinutes(Date.parse(w.finishedAt) - Date.parse(w.startedAt))} · ${sets.length} Sätze · ${Math.round(volume).toLocaleString('de-DE')} kg`
+                      : 'läuft …'}
                   </span>
                 </span>
                 <span aria-hidden="true">›</span>
